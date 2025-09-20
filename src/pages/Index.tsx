@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -12,9 +14,19 @@ const Index = () => {
               <div className="h-8 w-8 rounded-lg bg-primary"></div>
               <span className="text-lg font-semibold">Template</span>
             </div>
-            <Badge variant="secondary" className="text-xs">
-              v1.0.0
-            </Badge>
+            <div className="flex items-center gap-4">
+              <nav className="flex gap-2">
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/">Home</Link>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/about">About</Link>
+                </Button>
+              </nav>
+              <Badge variant="secondary" className="text-xs">
+                v1.0.0
+              </Badge>
+            </div>
           </div>
         </div>
       </header>
